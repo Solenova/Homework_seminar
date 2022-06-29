@@ -9,3 +9,5 @@ int b = ost1 / 10;
 int c = rndNum % 10;
 int result = a * 10 + c;
 Console.WriteLine($"{result}");
+// 2 способ быстрый)
+//int result = rndNum /100*10+rndNum %10;
