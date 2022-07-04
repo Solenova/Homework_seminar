@@ -2,13 +2,16 @@
 //или сообщает, что третьей цифры нет.
 
 Console.Write("Введите число ");
-string a = Console.ReadLine();         
-int b = a.Length;                       
-if (b >= 3)
+int a = Convert.ToInt32(Console.ReadLine());
+int amod = Math.Abs(a);
+int b = Convert.ToString(amod).Length;
+//int b = Convert.ToInt32(a);
+if (b > 2)
 {
-    double c = Convert.ToDouble(a);
-    c = c / Math.Pow(10, (b - 3)) % 10;
-    int d = Convert.ToInt32(c);
-    Console.Write("Третья цифра числа " + d);
+double c = Convert.ToDouble(amod);
+c = c / Math.Pow(10, (b - 3)) % 10;
+Console.Write(c);
+int d = Convert.ToInt32(c);
+Console.Write("Третья цифра числа " + d);
 }
 else Console.Write("Третьей цифры нет!");
