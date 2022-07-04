@@ -3,13 +3,12 @@
 //этого числа
 
 Console.Write("Введите трехзначное число ");
-string a = Console.ReadLine();
-int b = a.Length;
-if (b == 3)
+int a = Convert.ToInt32(Console.ReadLine());
+int b=Math.Abs (a);
+if (b>99&&b<1000)
 {
-    int c = Convert.ToInt32(a);
-    c = c % 100/10;
-        Console.Write("Вторая цифра числа " + c);
+        b = b % 100/10;
+        Console.Write("Вторая цифра числа " + b);
 }
 else Console.Write("Это было не трехзначное число!");
 
