@@ -3,23 +3,24 @@
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
-Console.Write("Введите пятизначное число: ");
-int a = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
+Console.Write("Введите натуральное пятизначное число: ");
+string a = Console.ReadLine();
 int count = 0;
 int del = 10000;
-
-if (a > 9999 && a < 100000)
+int b= Convert.ToInt32(a);
+if (b > 9999 && b < 100000)
 {
     for (int i = 1; i < 3; i++)
     {
-        int azel = a / del;
-        int aost = a % 10;
-        a = a % del / 10;
+        int azel = b / del;
+        int aost = b % 10;
+        b = b % del / 10;
         if (azel == aost) count ++;
         del = del / 100;
     }
-    if (count == 2) Console.WriteLine("палиндром");
-    else Console.WriteLine("непалиндром");
+    if (count == 2) Console.WriteLine($"{a} палиндром");
+    else Console.WriteLine($"{a} не палиндром");
 
 }
-else Console.Write("Вы ввели не пятизначное число.");
+else Console.Write("Вы ввели не то число.");
