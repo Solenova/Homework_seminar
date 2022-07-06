@@ -18,6 +18,6 @@ Console.Write("Y2=");
 int y2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Z2=");
 int z2 = Convert.ToInt32(Console.ReadLine());
-double rast=Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(x2-z1));
+double rast=Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
 //Console.WriteLine($"А({x1},{y1},{z1}); В({x2},{y2},{z2}) ->  {rast:N2}");
 Console.WriteLine($"А({x1},{y1},{z1}); В({x2},{y2},{z2}) ->  {rast:N2}");
