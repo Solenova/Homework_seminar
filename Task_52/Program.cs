@@ -58,7 +58,11 @@ void PrintArithmetic(int[,] arr)
     }
     Console.WriteLine("\b");
 }
-int[,] arrResult = FillMatrixArray(3, 4, -10, 10);
+Console.Write ("Введите количество строк в массиве ");
+int quantityLine =int.Parse(Console.ReadLine());
+Console.Write ("Введите количество столбцов в массиве ");
+int quantityColumn =int.Parse(Console.ReadLine());
+int[,] arrResult = FillMatrixArray(quantityLine, quantityColumn, -10, 10);
 PrintMatrixArray(arrResult);
 PrintArithmetic(arrResult);
 
