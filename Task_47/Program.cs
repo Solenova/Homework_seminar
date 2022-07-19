@@ -1,4 +1,4 @@
-﻿// Задача 46: Задайте двумерный массив размером m×n,
+﻿// Задача 47 : Задайте двумерный массив размером m × n,
 // заполненный случайными вещественными числами.
 // m = 3, n = 4.
 // 1 4 8 19
@@ -33,5 +33,9 @@ void PrintMatrix(double[,] arr)
         Console.WriteLine();
     }
 }
-double[,] arrayResult = CreateMatrixRndInt(3, 4, 1, 20);
+Console.Write ("Введите количество строк в массиве ");
+int quantityLine =int.Parse(Console.ReadLine());
+Console.Write ("Введите количество столбцов в массиве ");
+int quantityColumn =int.Parse(Console.ReadLine());
+double[,] arrayResult = CreateMatrixRndInt(quantityLine, quantityColumn, 1, 20);
 PrintMatrix(arrayResult);
