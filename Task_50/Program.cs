@@ -29,8 +29,8 @@ void PrintMatrix(double[,] arr)
         for (int j = 0; j < arr.GetLength(1); j++)
         {
             if (j == 0) Console.Write("|");
-            if (j < arr.GetLength(1) - 1) Console.Write($"{arr[i, j], 3:N2} | ");
-            else Console.Write($"{arr[i, j], 3:N2} | ");
+            if (j < arr.GetLength(1) - 1) Console.Write($"{arr[i, j], 3} | ");
+            else Console.Write($"{arr[i, j], 3} | ");
         }
         Console.WriteLine();
     }
