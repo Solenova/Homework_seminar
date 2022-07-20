@@ -1,9 +1,9 @@
 ﻿// Задача 47 : Задайте двумерный массив размером m × n,
 // заполненный случайными вещественными числами.
 // m = 3, n = 4.
-// 1 4 8 19
-// 5 -2 33 -2
-// 77 3 8 1
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
 
 Console.Clear();
 double[,] CreateMatrixRndInt(int m, int n, int min, int max)
@@ -15,8 +15,9 @@ double[,] CreateMatrixRndInt(int m, int n, int min, int max)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            arr[i, j] = rnd.Next(min, max + 1);
+            arr[i, j] = rnd.Next(min, max + 1) + rnd.NextDouble();
         }
+
     }
     return arr;
 }
@@ -26,9 +27,9 @@ void PrintMatrix(double[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            if (j == 0) Console.Write("|");
-            if (j < arr.GetLength(1) - 1) Console.Write($"{arr[i, j], 3:N2} | ");
-            else Console.Write($"{arr[i, j], 3:N2} | ");
+            //if (j == 0) Console.Write(" ");
+            if (j < arr.GetLength(1) - 1) Console.Write($"{arr[i, j], 3:N1} ");
+            else Console.Write($"{arr[i, j], 3:N1}  ");
         }
         Console.WriteLine();
     }
